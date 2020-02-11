@@ -40,6 +40,16 @@ VALUES('MySQL', 'MySQL is ...',NOW(),'@shoon__100s','DEVELOPER');
 <h4 id="테이블에-추가한-데이터-읽기">테이블에 추가한 데이터 읽기</h4>
 <pre><code>SELECT * FROM 테이블이름; //모든 데이터 읽기
 </code></pre>
+<pre><code>WHERE
+조건 검사
+
+예시
+SELECT NAME WHERE NAME IS NOT NULL;
+</code></pre>
+<pre><code>NULL인 값 대체하기
+IFNULL 함수 사용
+SELECT IFNULL(NAME,'No name') FROM table;
+</code></pre>
 <pre><code>SELECT의 여러 가지 함수들(그룹 함수)
 SUM : 조건을 만족하는 컬럼의 합
 MAX : 조건을 만족하는 값들 중 최대값
@@ -82,5 +92,10 @@ LIMIT : 갯수 제한
 #예시
 SELECT topic.id AS topic_id,title,description,created,name,profile
 FROM topic LEFT JOIN author ON topic.author_id = author.id ORDER BY author_id;
+</code></pre>
+<h4 id="기타-정리">기타 정리</h4>
+<pre><code>문자열을 포함하는 열 찾기
+WHERE 칼럼이름 like"%A%" //문자열 앞뒤에서 A 포함하는 문자열 찾기
+
 </code></pre>
 
