@@ -40,6 +40,31 @@ VALUES('MySQL', 'MySQL is ...',NOW(),'@shoon__100s','DEVELOPER');
 <h4 id="테이블에-추가한-데이터-읽기">테이블에 추가한 데이터 읽기</h4>
 <pre><code>SELECT * FROM 테이블이름; //모든 데이터 읽기
 </code></pre>
+<pre><code>SELECT의 여러 가지 함수들(그룹 함수)
+SUM : 조건을 만족하는 컬럼의 합
+MAX : 조건을 만족하는 값들 중 최대값
+MIN : 조건을 만족하는 값들 중 최소값
+AVG : 조건을 만족하는 값들의 평균값
+COUNT : 조건을 만족하는 항들의 갯수
+
+SELECT SUM(컬럼이름) 결과로 출력할 이름 (WHERE ~) (FROM 테이블이름);
+과 같이 사용함
+</code></pre>
+<pre><code>GROUP BY
+반드시 위에 기술한 그룹 함수들과 함께 사용되어야 함
+GROUP BY와 함께 사용시 그룹 함수의 결과 값은 GROUP BY절에 기술된 컬럼의 항목들에 행의 갯수에 의해 정해진다
+
+SELECT ANIMAL_TYPE, COUNT(ANIMAL_TYPE) count
+FROM ANIMAL_INS
+GROUP BY ANIMAL_TYPE;
+위와 같이 사용한다.
+</code></pre>
+<pre><code>HAVING
+WHERE와 똑같은 기능을 하지만, 그룹 함수를 사용하는 조건문의 경우 HAVING절에 사용하여야 한다. GROUP BY 의 뒤에 사용한다
+
+HAVING avg(salary) &lt; 9000;
+위와 같이 사용한다.
+</code></pre>
 <p>애스터리스크(*) : 프로젝션 중 모든 것을 나타내라</p>
 <pre><code>순서 : FROM, WHERE, ORDER, LIMIT
 SELECT 프로젝션 (FROM 테이블이름) (WHERE field명=데이터값);
@@ -47,9 +72,15 @@ SELECT * FROM 테이블이름 ORDER BY 필드이름 옵션(순차 : ASC , 역순
 LIMIT : 갯수 제한
 </code></pre>
 <h4 id="테이블-안의-데이터-수정하기">테이블 안의 데이터 수정하기</h4>
-<pre><code>UPDATE 테이블명 SET 필드명=바꿀 데이터 값 WHERE 필드명=데이터
+<pre><code>UPDATE 테이블명 SET 필드명=바꿀 데이터 값 WHERE 필드명=데이터;
 </code></pre>
 <h4 id="테이블-안의-데이터-삭제하기">테이블 안의 데이터 삭제하기</h4>
-<pre><code>DELETE FROM 테이블명 WHERE 필드 = 데이터
+<pre><code>DELETE FROM 테이블명 WHERE 필드 = 데이터;
+</code></pre>
+<h4 id="join-이용하기">JOIN 이용하기</h4>
+<pre><code>SELECT 프로젝션 FROM 테이블명 LEFT(RIGHT) JOIN 합칠 테이블명 ON 테이블 조건 = 합칠 테이블 조건;
+#예시
+SELECT topic.id AS topic_id,title,description,created,name,profile
+FROM topic LEFT JOIN author ON topic.author_id = author.id ORDER BY author_id;
 </code></pre>
 
