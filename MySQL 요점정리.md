@@ -1,12 +1,4 @@
----
-
-
----
-
 <h1 id="mysql-요점정리">MySQL 요점정리</h1>
-<blockquote>
-<p>사실 굳이 열심히 알 필요는 없다. 검색하면 다 나오는데 뭘</p>
-</blockquote>
 <h4 id="데이터베이스-생성하기">데이터베이스 생성하기</h4>
 <pre><code>CREATE DATABASE 디비이름;
 </code></pre>
