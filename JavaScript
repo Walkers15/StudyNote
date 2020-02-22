@@ -9,3 +9,6 @@ https:  // github.com   (:80)/                         Walkers15/StudyNote/new/m
 https://nodejs.org/dist/latest-v12.x/docs/api/
 nodejs 기본 모듈 설명서
 
+url.parse(request.url, true); 했을때
+pathname : 쿼리 스트링 없이 주소만 출력
+path = 쿼리 포함 출려
