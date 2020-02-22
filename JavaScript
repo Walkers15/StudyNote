@@ -1,0 +1,11 @@
+이것저것 적고싶은것들 끄적끄적
+
+https:  // github.com   (:80)/                         Walkers15/StudyNote/new/master   [?id=HTML&page=12]
+프로토콜   호스트(도메인) 포트(기본 서버 80 - 생략가능)    path(경로)                       쿼리 스트링(query string) - 원래 없는데 공부용으로 적음
+
+
+쿼리 스트링은 ? 로 시작한다
+
+https://nodejs.org/dist/latest-v12.x/docs/api/
+nodejs 기본 모듈 설명서
+
