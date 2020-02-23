@@ -12,3 +12,55 @@ nodejs 기본 모듈 설명서
 url.parse(request.url, true); 했을때
 pathname : 쿼리 스트링 없이 주소만 출력
 path = 쿼리 포함 출려
+
+
+HTML안에 자바스크립트 이벤트 핸들러 넣기
+<element event="some JavaScript">
+이벤트 참고 https://www.w3schools.com/jsref/dom_obj_event.asp
+형태로 넣는다
+예시) <button onclick="document.getElementById('demo').innerHTML = Date()">The time is?</button>
+
+
+배열
+var arr = ['A','B','C','D'];
+값 추가
+arr.push('E');
+
+반복문
+
+for in
+var person = {fname:"John", lname:"Doe", age:25};
+
+var text = "";
+var x;
+for (x in person) {
+  text += person[x];
+}
+
+for of
+var cars = ['BMW', 'Volvo', 'Mini'];
+var x;
+
+for (x of cars) {
+  document.write(x + "<br >");
+}
+
+함수
+function 함수이름(매개변수){
+  ...
+  return 리턴값;
+}
+자바스크립트 비동기식
+비동기식이란?
+특정 코드의 연산이 끝날 때 까지 그 코드를 기다려주지 않고,
+다음 코드를 먼저 실행하는 형식을 말한다.
+(동기식 : 코드 한줄 실행하면 그 코드 끝날때까지 기다림)
+비동기식의 문제점
+서버에서 데이터를 받아 출력하는 코드를 짠다고 가정하면,
+출력하는 코드가 데이터를 받기도 전에 실행되어 제대로된 값을 띄울 수 없음
+
+해결 방안
+콜백 함수 사용.
+콜백 함수는, 특정 조건이 만족될 때 실행되는 함수로, 서버에서 데이터를 받았을 때만 실행 등의 형식으로 비동기 문제를 해결할 수 있다.
+
+
