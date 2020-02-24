@@ -1,4 +1,12 @@
 <h1 id="mysql-요점정리">MySQL 요점정리</h1>
+<h4 id="접속법">접속법</h4>
+<pre><code>
+1. mysql이 설치된 디렉터리로 이동
+cd D:
+cd WAMP/mysql/bin
+
+2. -uroot -p 입력 후 나오는 창에 비밀번호 입력
+</code></pre>
 <h4 id="데이터베이스-생성하기">데이터베이스 생성하기</h4>
 <pre><code>CREATE DATABASE 디비이름;
 </code></pre>
