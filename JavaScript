@@ -90,3 +90,11 @@ pm2 start main.js --watch --ignore-watch="data/*"--no-daemon
 예시
 db.query(`UPDATE topic SET title=?,description=?,author_id=?,created=NOW() WHERE id = ?`, [title, description,post.author,post.id], function (error, result)
 위처럼 받고 싶은 입력값에 ?를 넣고, 그 다음 파라미터로 입력할 값의 객체를 생서하여 전달한다.
+
+자바스크립트 escape 보안
+sanitizeHTML
+var sanitizeHtml = require('sanitize-html');
+${sanitizeHtml(topic[0].name)}
+처럼 살균할 데이터를 파라미터로 넘겨서 사용
+
+
