@@ -84,3 +84,9 @@ for(var n in roles){
 
 pm2  사용법
 pm2 start main.js --watch --ignore-watch="data/*"--no-daemon
+
+자바스크립트 SQL보안
+자바스크립트에서 SQL문을 사용할 때는, 사용자에게 입력받을 값을 쿼리문 안에?를 넣고, 그 후 넘겨주어 사용해야 한다.
+예시
+db.query(`UPDATE topic SET title=?,description=?,author_id=?,created=NOW() WHERE id = ?`, [title, description,post.author,post.id], function (error, result)
+위처럼 받고 싶은 입력값에 ?를 넣고, 그 다음 파라미터로 입력할 값의 객체를 생서하여 전달한다.
