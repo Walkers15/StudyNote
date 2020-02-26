@@ -30,7 +30,8 @@ table(표) : x축&gt;row,record,행 &amp; y축&gt;column,열</p>
 NOT NULL -&gt; 빈칸 입력 금지
 AUTO_INCREMENT -&gt; 중복 없이 자동으로 증가
 </code></pre>
-<p><a href="https://www.mysqltutorial.org/mysql-data-types.aspx">데이터타입 참고</a>   <a href="https://devhints.io/mysql">치트시트</a></p>
+<p><a href="https://www.mysqltutorial.org/mysql-data-types.aspx">데이터타입 참고</a>   <a href="https://devhints.io/mysql">치트시트</a><br>
+<img src="https://github.com/Walkers15/StudyNote/blob/master/MySQL%20%EB%8D%B0%EC%9D%B4%ED%84%B0%ED%83%80%EC%9E%85.png" alt="데이터타입"></p>
 <h4 id="테이블-정보-보기">테이블 정보 보기</h4>
 <pre><code>DESC 테이블명;
 </code></pre>
