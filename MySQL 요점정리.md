@@ -1,10 +1,12 @@
+---
+
+
+---
+
 <h1 id="mysql-요점정리">MySQL 요점정리</h1>
-<h4 id="접속법">접속법</h4>
-<pre><code>1. mysql이 설치된 디렉터리로 이동
-D:
-cd WAMP/mysql/bin
-2. -uroot -p 입력 후 나오는 창에 비밀번호 입력
-</code></pre>
+<blockquote>
+<p>사실 굳이 열심히 알 필요는 없다. 검색하면 다 나오는데 뭘</p>
+</blockquote>
 <h4 id="데이터베이스-생성하기">데이터베이스 생성하기</h4>
 <pre><code>CREATE DATABASE 디비이름;
 </code></pre>
@@ -29,6 +31,9 @@ NOT NULL -&gt; 빈칸 입력 금지
 AUTO_INCREMENT -&gt; 중복 없이 자동으로 증가
 </code></pre>
 <p><a href="https://www.mysqltutorial.org/mysql-data-types.aspx">데이터타입 참고</a>   <a href="https://devhints.io/mysql">치트시트</a></p>
+<h4 id="테이블-정보-보기">테이블 정보 보기</h4>
+<pre><code>DESC 테이블명;
+</code></pre>
 <h4 id="데이터-추가하기">데이터 추가하기</h4>
 <pre><code>INSERT INTO 테이블이름(field1, field2, ...)
 VALUES(값1, 값2, ...)
