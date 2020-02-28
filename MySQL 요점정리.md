@@ -35,6 +35,25 @@ AUTO_INCREMENT -&gt; 중복 없이 자동으로 증가
 <h4 id="테이블-정보-보기">테이블 정보 보기</h4>
 <pre><code>DESC 테이블명;
 </code></pre>
+<h4 id="테이블-컬럼-관련">테이블 컬럼 관련</h4>
+<pre><code>컬럼 추가
+alter table [테이블명] add [컬럼명] [타입] [옵션];
+
+ex) alter table [테이블명] add [컬럼명] varchar(100) not null default '0';
+
+컬럼 삭제
+alter table [테이블명] drop [컬럼명];
+
+컬럼명 변경 및 타입 변경
+alter table [테이블명] change [컬럼명] [변경할컬럼명] varchar(12);
+
+컬럼 타입 수정
+alter table [테이블명] modify [컬럼명] varchar(14);
+
+컬럼 순서 변경
+alter table 테이블명 modify 순서 변경할 컬럼명 컬럼 타입 after 앞에 올 컬럼명
+
+</code></pre>
 <h4 id="데이터-추가하기">데이터 추가하기</h4>
 <pre><code>INSERT INTO 테이블이름(field1, field2, ...)
 VALUES(값1, 값2, ...)
