@@ -1,0 +1,36 @@
+Sanitizehtml - html 인풋폼에서 스크립트 태그 등 제거(살균)
+
+https://www.npmjs.com/package/sanitize-html
+
+bootstarp
+
+https://getbootstrap.com/
+1. npm install bootstrap
+2. app.js 파일에 설정
+  app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); // redirect bootstrap JS
+  app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css')); // redirect CSS bootstrap
+3. 해당 페이지에 적용
+<head>
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<script src = "/js/bootstrap.min.js"></script>
+
+cookie, cookieppasrser, express
+express 제너레이터 사용시 자동 설치
+
+세션
+https://www.npmjs.com/package/express-session
+
+mysql & mysql session
+https://www.npmjs.com/package/mysql
+https://www.npmjs.com/package/mssql-session-store
+
+body-parser : express 에서 파라미터로 경로 사용할때(rooms/:roomId)
+https://www.npmjs.com/package/body-parser
+
+passport
+http://www.passportjs.org/
+
+npm
+pm2
+기본설치할것!
